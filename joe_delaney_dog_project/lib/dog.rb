@@ -1,4 +1,9 @@
 class Dog
+
+
+    attr_reader :name, :breed, :age, :favorite_foods
+    attr_writer :age
+
     def initialize(name, breed, age, bark, favorite_foods)
         @name = name
         @breed = breed 
@@ -7,32 +12,12 @@ class Dog
         @favorite_foods = favorite_foods 
     end
 
-    def name 
-        @name
-    end
-
-    def breed 
-        @breed
-    end
-
-    def age 
-        @age
-    end
-
-    def age=(number)
-        @age = number
-    end
-
     def bark
         if @age > 3
             @bark.upcase 
         else
             @bark.downcase
         end
-    end
-
-    def favorite_foods 
-        @favorite_foods
     end
 
     def favorite_food?(str)
